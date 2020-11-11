@@ -21,7 +21,7 @@ $(() => {
 
     if(user == null){
       // Materialize.toast(`Para crear el post debes estar autenticado`, 4000)
-      Swal.fire('Para crear el post debes estar autenticado')
+      Swal.fire('Para crear el curso debes estar autenticado')
       return
     }
     // console.log(user)
@@ -46,7 +46,7 @@ $(() => {
         Swal.fire({
   position: 'top-end',
   icon: 'success',
-  title: 'Post creado correctamente',
+  title: 'Curso creado correctamente',
   showConfirmButton: false,
   timer: 1500
 })

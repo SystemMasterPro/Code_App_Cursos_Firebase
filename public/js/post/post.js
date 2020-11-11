@@ -114,7 +114,7 @@ class Post {
   obtenerTemplatePostVacio() {
     return `<article class="post">
       <div class="post-titulo">
-          <h5>Crea el primer Post a la comunidad</h5>
+          <h5>Crea el primer Curso a la comunidad</h5>
       </div>
       <div class="post-calificacion">
           <a class="post-estrellita-llena" href="*"></a>

@@ -96,7 +96,7 @@ $(() => {
   })
 
   $('#btnTodoPost').click(() => {
-    $('#tituloPost').text('Posts de la Comunidad')
+    $('#tituloPost').text('Cursos de la Comunidad')
      const post=new Post()
      post.consultarTodosPost()   
   })
@@ -104,7 +104,7 @@ $(() => {
   $('#btnMisPost').click(() => {
     const user = firebase.auth().currentUser
     if (user) {
-      $('#tituloPost').text('Mis Posts')
+      $('#tituloPost').text('Mis Cursos')
       const post=new Post()
       post.consultarPostxUsuario(user.email)
     }else{

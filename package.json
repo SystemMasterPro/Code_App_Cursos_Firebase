@@ -8,17 +8,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jggomez/blogvideos-ucc.git"
+    "url": "https://github.com/SystemMasterPro/RepoCursosWeb.git"
   },
   "keywords": [
     "blog"
   ],
-  "author": "Juan Guillermo Gómez",
+  "author": "Richard Fernando Jimenez",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jggomez/blogvideos-ucc/issues"
+    "url": "https://github.com/SystemMasterPro"
   },
-  "homepage": "https://github.com/jggomez/blogvideos-ucc#readme",
+  "homepage": "https://administrador-2acb9.web.app/",
   "devDependencies": {
     "browser-sync": "^2.18.8",
     "del": "^2.2.2",
