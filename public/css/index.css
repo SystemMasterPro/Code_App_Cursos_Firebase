@@ -223,41 +223,7 @@ body {
   font-size: 30px;
   font-family: "Flaticon";
 }
-.posts {
-  padding: 0.8em;
-  margin: 0px;
-  text-align: center;
-  /* background-color: lightslategrey; */
-}
-.posts .post {
-  background: rgb(20, 122, 194);
-  border: 1px solid #000;
-  box-shadow: 10px 9px 25px -1px rgba(0,0,0,0.75);
-  display: block;
-  margin-bottom: 1.5em;
-  margin-right: 1.5em;
-  width: 100%;
-}
-.posts .post .post-calificacion {
-  text-align: center;
-  padding: 0.5em;
-}
-.posts .post .post-calificacion .post-estrellita-vacia {
-  text-decoration: none;
-}
-.posts .post .post-calificacion .post-estrellita-vacia:before {
-  color: #7acc2d;
-  content: "\e9d7";
-  font-family: "icono_estrellita_vacia";
-}
-.posts .post .post-calificacion .post-estrellita-llena {
-  text-decoration: none;
-}
-.posts .post .post-calificacion .post-estrellita-llena:before {
-  color: #7acc2d;
-  content: "\e9d9";
-  font-family: "icono_estrellita_llena";
-}
+/* Comienza lo bueno -------------------------------------------------------------------------------------- */
 .posts .post .post-titulo {
   text-align: center;
   background: rgb(20, 122, 194);
@@ -427,7 +393,7 @@ body {
     display: inline-block;
   }
   .menu ul {
-    height: 40px;
+    height: 50px;
   }
   .menu ul li {
     display: inline-block;

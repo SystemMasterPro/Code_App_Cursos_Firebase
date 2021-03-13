@@ -112,27 +112,20 @@ class Post {
   }
 
   obtenerTemplatePostVacio() {
-    return `<article class="post">
-      <div class="post-titulo">
-          <h5>Crea el primer Curso a la comunidad</h5>
+    return `<article class="card">
+      <div class="post-titulo" style="text-align:center; background:#126798;">
+          <h5 style="color:white;margin:10px;">Comparte el primer Curso para la comunidad</h5>
       </div>
-      <div class="post-calificacion">
-          <a class="post-estrellita-llena" href="*"></a>
-          <a class="post-estrellita-llena" href="*"></a>
-          <a class="post-estrellita-llena" href="*"></a>
-          <a class="post-estrellita-llena" href="*"></a>
-          <a class="post-estrellita-vacia" href="*"></a>
-      </div>
-      <div class="post-video">
-          <iframe type="text/html" width="500" height="385" src='https://www.youtube.com/embed/bTSWzddyL7E?ecver=2'
+      <div class="post-video" style="text-align:center;">
+          <iframe type="text/html" width="100%" height="385" src='https://www.youtube.com/embed/bTSWzddyL7E?ecver=2'
               frameborder="0"></iframe>
           </figure>
       </div>
       <div class="post-videolink">
           Video
       </div>
-      <div class="post-descripcion">
-          <p>Crea el primer Post a la comunidad</p>
+      <div class="post-descripcion" style="text-align:center; background:#126798;">
+          <p>La comunidad Dev esta compartiendo contenido, tu que esperas!!!</p>
       </div>
       <div class="post-footer container">         
       </div>
@@ -148,72 +141,61 @@ class Post {
     fecha
   ) {
     if (imagenLink) {
-      return `<article class="post">
-            <div class="post-titulo">
-                <h5>${titulo}</h5>
-            </div>
-            <div class="post-calificacion">
-                <a class="post-estrellita-llena" href="*"></a>
-                <a class="post-estrellita-llena" href="*"></a>
-                <a class="post-estrellita-llena" href="*"></a>
-                <a class="post-estrellita-llena" href="*"></a>
-                <a class="post-estrellita-vacia" href="*"></a>
-            </div>
-            <div class="post-video">                
-                <img id="imgVideo" src='${imagenLink}' class="post-imagen-video" 
-                    alt="Imagen Video">     
-            </div>
-            <div class="post-videolink">
-                <a href="${videoLink}" target="blank">Ir al Curso</a>                            
-            </div>
-            <div class="post-descripcion">
-                <p>${descripcion}</p>
-            </div>
-            <div class="post-footer container">
+      return `
+            <div class="card">
+              <div style="text-align:center;padding:5px;">
+                <a style="color:#3BC73F;" ><i class="fas fa-star"></i></a>
+                <a style="color:#3BC73F;"><i class="fas fa-star"></i></a>
+                <a style="color:#3BC73F;"><i class="fas fa-star"></i></a>
+                <a style="color:#3BC73F;"><i class="fas fa-star"></i></a>
+                <a style="color:#3BC73F;"><i class="fas fa-star"></i></a>
+              </div>
+              <img src="${imagenLink}" class="card-img-top" alt="..." style="height: 60vh">
+              <div class="card-body" style="text-align:center;">
+                <h5 class="card-title" style='color:white;text-align:center;background-color: #126798;padding: 10px;'>${titulo}</h5>
+                <p class="card-text" style='color:black;text-align:center;font-family: 'Times New Roman', Times, serif;'>${descripcion}</p>
+                <a href="${videoLink}" style="width:100%;" target="_blank" class="btn btn-primary">Ir al Curso</a>
+              </div>
+              <div class="card-footer" style="font-family: 'Times New Roman', Times, serif;">
                 <div class="row">
-                    <div class="col m6">
+                    <div style="color:black;">
                         Fecha: ${fecha}
                     </div>
-                    <div class="col m6">
+                    <div style="color:black;">
                         Autor: ${autor}
                     </div>        
                 </div>
+              </div>
             </div>
-        </article>`;
+        `;
     }
 
-    return `<article class="post">
-                <div class="post-titulo">
-                    <h5>${titulo}</h5>
-                </div>
-                <div class="post-calificacion">
-                    <a class="post-estrellita-llena" href="*"></a>
-                    <a class="post-estrellita-llena" href="*"></a>
-                    <a class="post-estrellita-llena" href="*"></a>
-                    <a class="post-estrellita-llena" href="*"></a>
-                    <a class="post-estrellita-vacia" href="*"></a>
-                </div>
-                <div class="post-video">
-                    <iframe type="text/html" width="500" height="385" src='${videoLink}'
-                        frameborder="0"></iframe>
-                    </figure>
-                </div>
-                <div class="post-videolink">
-                    Video
-                </div>
-                <div class="post-descripcion">
-                    <p>${descripcion}</p>
-                </div>
-                <div class="post-footer container">
-                    <div class="row">
-                        <div class="col m6">
-                            Fecha: ${fecha}
-                        </div>
-                        <div class="col m6">
-                            Autor: ${autor}
-                        </div>        
+    return `
+            <div class="card">
+              <div style="text-align:center;padding:5px;">
+                <a style="color:#3BC73F;" ><i class="fas fa-star"></i></a>
+                <a style="color:#3BC73F;"><i class="fas fa-star"></i></a>
+                <a style="color:#3BC73F;"><i class="fas fa-star"></i></a>
+                <a style="color:#3BC73F;"><i class="fas fa-star"></i></a>
+                <a style="color:#3BC73F;"><i class="fas fa-star"></i></a>
+              </div>
+              <iframe type="text/html" width="100%" height="400px" src='${videoLink}' frameborder="0"></iframe>
+              <div class="card-body">
+                <h5 class="card-title" style='color:white;text-align:center;background-color: #126798;padding: 10px;'>${titulo}</h5>
+                <p class="card-text" style='color:black;text-align:center;font-family: 'Times New Roman', Times, serif;'>${descripcion}</p>
+                <a href="${videoLink}" target="_blank" style="width:100%;" class="btn btn-primary">Ir al Curso</a>
+              </div>
+              <div class="card-footer" style="font-family: 'Times New Roman', Times, serif;">
+                <div class="row">
+                    <div style="color:black;">
+                        Fecha: ${fecha}
                     </div>
+                    <div style="color:black;">
+                        Autor: ${autor}
+                    </div>        
                 </div>
-            </article>`;
+              </div>
+            </div>
+          `;
   }
 }

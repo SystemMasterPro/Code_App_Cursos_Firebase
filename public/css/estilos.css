@@ -6,18 +6,13 @@
 }
 
 body {
-    background-color:#000;
+    background: #43C6AC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #191654, #43C6AC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #191654, #43C6AC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: #fff;
     font-size: 18px;
     font-family: 'Lato', sans-serif;
     font-weight: 300;
-}
-
-#particles-js {
-	height: 100vh; 
-	width: 100%;
-    position: fixed;
-    z-index: -1;
 }
 
 .contenedor {
