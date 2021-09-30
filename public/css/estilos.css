@@ -15,6 +15,16 @@ body {
     font-weight: 300;
 }
 
+.colorNavbar{
+    background-color: #191654 !important;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
 .contenedor {
 	width: 90%;
 	max-width: 1200px;
@@ -107,6 +117,21 @@ body {
     animation: none;
 }
 
+@media(max-width:1100px){
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+}
+
+@media(max-width:800px){
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+}
+}
 
 @keyframes parpadeo  {
     0%, 41%, 45%, 47%, 49.5%, 100%  { 

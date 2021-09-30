@@ -1,0 +1,52 @@
+[debug] [2021-09-30T20:16:35.972Z] ----------------------------------------------------------------------
+[debug] [2021-09-30T20:16:35.975Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Usuario\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2021-09-30T20:16:35.976Z] CLI Version:   9.6.1
+[debug] [2021-09-30T20:16:35.976Z] Platform:      win32
+[debug] [2021-09-30T20:16:35.976Z] Node Version:  v14.16.0
+[debug] [2021-09-30T20:16:35.977Z] Time:          Thu Sep 30 2021 15:16:35 GMT-0500 (hora de Ecuador)
+[debug] [2021-09-30T20:16:35.978Z] ----------------------------------------------------------------------
+[debug] [2021-09-30T20:16:35.978Z] 
+[debug] [2021-09-30T20:16:35.987Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-09-30T20:16:35.988Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\xampp\htdocs\Pasantias
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+  * You are initializing in an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, using administrador-2acb9. 
+[debug] [2021-09-30T20:16:43.266Z] > refreshing access token with scopes: []
+[debug] [2021-09-30T20:16:43.267Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-09-30T20:16:43.771Z] <<< HTTP RESPONSE 400 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","date":"Thu, 30 Sep 2021 20:16:43 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-09-30T20:16:43.774Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/administrador-2acb9 [none]
+[debug] [2021-09-30T20:16:44.247Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/administrador-2acb9 401
+[debug] [2021-09-30T20:16:44.247Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/administrador-2acb9 {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED"}}
+[debug] [2021-09-30T20:16:44.248Z] HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2021-09-30T20:16:44.514Z] FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+    at module.exports (C:\Users\Usuario\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:38:12)
+    at Client.doRequest (C:\Users\Usuario\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:238:23)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async Client.request (C:\Users\Usuario\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:96:20)
+    at async Object.getFirebaseProject (C:\Users\Usuario\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:289:21)
+    at async Object.doSetup [as project] (C:\Users\Usuario\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\project.js:77:27)
+    at async init (C:\Users\Usuario\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\index.js:19:9)
+[error] 
+[error] Error: Failed to get Firebase project administrador-2acb9. Please make sure the project exists and your account has permission to access it.

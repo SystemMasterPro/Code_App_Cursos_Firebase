@@ -211,6 +211,10 @@ body {
   font-size: 30px;
   font-family: "Flaticon";
 }
+.footer .contenedor-footer .redesSociales .logos-redes .logo-messenger{
+  color: #7acc2d;
+  font-size: 30px;
+}
 .footer .contenedor-footer .redesSociales .logos-redes .logo-twitter:before {
   color: #7acc2d;
   content: "\f102";

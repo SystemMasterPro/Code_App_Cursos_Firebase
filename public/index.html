@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Cursos SystemMaster</title>
+    <title>Cursos Gratuitos</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="icon" type="image/png" href="imagenes/icon.png" />
+    <link rel="icon" type="image/png" href="imagenes/logo.png" />
     <link href="https://fonts.googleapis.com/css?family=Allerta|Montserrat" rel="stylesheet">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
@@ -36,7 +36,7 @@
                 <img id="avatar" src="imagenes/usuario.png" alt="Avatar">
             </figure>
     </header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark colorNavbar">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,7 +44,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav" style="position: absolute;left: 50%;transform: translatex(-50%);">
-                    <li class="nav-item">
+                    <li class="nav-item hoverLi">
                         <a class="nav-link active mx-2" aria-current="page" style="font-family: Georgia, 'Times New Roman', Times, serif;" id="btnTodoPost"><i class="fas fa-bars fa-1x"></i> Cursos</a>
                     </li>
                     <li class="nav-item">
@@ -60,26 +60,10 @@
             </div>
         </div>
     </nav>
-    <div class="container mt-4">
-        <div class="row">
-            <div class="col-12" style="text-align: center;">
-                <h4 style="color: white;">Tecnología Friki</h4>
-            </div>
-        </div>
-    </div>
     
     <!-- CURSOS -->
-        <!-- <div class="container">
-            <div class="row">
-                <div class="col-12 col-sm-6 col-md-4 col-lg-4" id="posts"></div>
-            </div>
-        </div> -->
         <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <section id="posts"></section>
-                </div>
-            </div>
+            <div class="wrapper mt-3" id="posts"></div>
         </div>
     <!-- FIN CURSOS -->
     
@@ -87,18 +71,19 @@
         <div class="contenedor-footer">
             <div class="redesSociales">
                 <!-- Esto es el footer -->
-                <p class="realizadopor"><strong>Desarrolador Richard Fernando J.</strong></p>
+                <p class="realizadopor"><strong>Richardeveloper</strong></p>
                 <p class="realizadoclase">
-                    <!-- <a href="https://api.whatsapp.com/send?phone=+593961341616&text=No temas en escribirme crack!" target="_blank"> <i class="fab fa-whatsapp"></i> </a> -->
-                    <a href="https://t.me/comentariosweb" target="_blank"> <i class="fab fa-telegram"></i> </a>
+                    <a href="https://api.whatsapp.com/send?phone=+593962093738&text=Hola te saludo desde la pagina de cursos gratuitos - SystemMaster" target="_blank"> <i class="fab fa-whatsapp"></i> </a>
+                    <a href="https://t.me/Richardeveloper" target="_blank"> <i class="fab fa-telegram"></i> </a>
                 </p>
-                <div class="logos-redes">
+                <div class="logos-redes mb-4">
                     <a class="logo-facebook" target="_blank" href="https://www.facebook.com/richardfernando.jimenez/"></a>
                     <a class="logo-twitter" target="_blank" href="https://twitter.com/Richard6_10"></a>
                     <a class="logo-github" target="_blank" href="https://github.com/SystemMasterPro"></a>
-                    <!-- http://m.me/nombredeusuario   para vincular messenger con tu pagina web-->
+                    <a target="_blank" href="https://m.me/richardfernando.jimenez/"> <i class="fab fa-facebook-messenger logo-messenger"></i></a>
                 </div>
             </div>
+            <!-- FORMULARIO -->
             <form action="enviar.php" method="post">
                 <div class="formulario-contactenos">
                     <div class="form-col1">
@@ -108,16 +93,16 @@
                         </div>
                         <div class="input-field">
                             <input id="emailContacto" type="email" name="mail" class="mail" required />
-                            <label for="emailContacto">E-mail</label>
+                            <label for="emailContacto">Correo:</label>
                         </div>
                         <!-- tipos-comentarios  => esto iba en class -->
                         <div class="input-field">
-                            <label>Celular</label>
+                            <label>Celular:</label>
                             <input type="text" name="phone" class="subject">
                         </div>
                     </div>
                     <div class="form-col2">
-                        <label for="comentariosContacto">Comentarios:</label>
+                        <label for="comentariosContacto">Mensaje o comentario:</label>
                         <textarea id="comentariosContacto" name="message" class="message"
                             placeholder="Escribe tu comentario" cols="30" rows="6" required></textarea>
                         <input type="submit" class="waves-effect waves-light btn btnPpal" value="Enviar" />
@@ -125,8 +110,8 @@
                 </div>
             </form>
         </div>
-        <div style="text-align: center;background: white;">
-            <a style="color: black; font-family: 'Times New Roman', Times, serif;" href="./politicas-de-privacidad.html" target="_blank">Politicas de Privacidad</a>
+        <div style="text-align: center;background: white;padding:15px;">
+            <a style="color: black; font-family: 'Times New Roman', Times, serif;text-decoration: none;" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'" href="./politicas-de-privacidad.html" target="_blank">Politicas de Privacidad</a>
         </div>
     </footer>
 
@@ -137,19 +122,23 @@
                 <div class="row">
                     <div class="col s12 m6 registro-bienvenida">
                         <h4>Bienvenid@ a los mejores cursos gratuitos</h4>
-                        <span>Empieza Ahora</span>
+                        <span>Inicia Sesion y sube el curso que desees</span>
                     </div>
                     <div class="col s12 m6 registro-formulario">
-                        <div class="input-field">
+                        <div class="input-field mt-2">
                             <input id="emailSesion" type="email" required style="color: black;" />
-                            <label for="emailSesion">E-mail:</label>
+                            <label for="emailSesion">Correo:</label>
                         </div>
                         <div class="input-field">
                             <input id="passwordSesion" type="password" required style="color: black;" />
-                            <label for="passwordSesion">Password:</label>
+                            <label for="passwordSesion">Contraseña:</label>
                         </div>
                         <div class="div-btnInicioSesion">
-                            <a style="color: white;" id="btnInicioEmail" class="btn waves-effect waves-light">Iniciar Sesión</a>
+                            <a style="color: white;" id="btnInicioEmail" class="btn btn-primary">Iniciar Sesión</a>
+                        </div>
+                        <div class="text-center">
+                            <a style="color: white;" id="btnRegistrarse" class="btn btn-success">Crear una cuenta<i
+                                    class="material-icons left">account_box</i></a>
                         </div>
                         <div class="lbl-ingresar-redes">
                             <span>INGRESA CON:</span>
@@ -159,10 +148,6 @@
                             <a style="text-decoration: none;" id="authGoogle" class="logo-google" href="#"></a>
                             <a style="text-decoration: none;" id="authTwitter" class="logo-twitter" href="#"></a>
                         </div>
-                    </div>
-                    <div class="col s12 m12 div-btnRegistrarse">
-                        <a style="color: white;" id="btnRegistrarse" class="btn waves-effect waves-light">Crear una cuenta<i
-                                class="material-icons left">account_box</i></a>
                     </div>
                 </div>
             </div>
@@ -176,7 +161,7 @@
                 <div class="row">
                     <div class="col s12 m6 registro-bienvenida">
                         <h4>Bienvenid@ a los mejores cursos gratuitos</h4>
-                        <span>Empieza Ahora</span>
+                        <span>Crea una cuenta e inicia ya!</span>
                     </div>
                     <div class="col s12 m6 registro-formulario">
                         <div class="input-field">
@@ -185,18 +170,18 @@
                         </div>
                         <div class="input-field">
                             <input id="emailContactoReg" type="email" maxlength="50" data-length="50" required style="color: black;" />
-                            <label for="emailContactoReg">E-mail:</label>
+                            <label for="emailContactoReg">Correo:</label>
                         </div>
                         <div class="input-field">
                             <input id="passwordReg" type="password" maxlength="10" data-length="10" required style="color: black;" />
-                            <label for="passwordReg">Password:</label>
+                            <label for="passwordReg">Contraseña:</label>
                         </div>
                         <div class="div-btnInicioSesion">
                             <a style="color: white;" id="btnRegistroEmail" class="btn waves-effect waves-light">Registrarse</a>
                         </div>
                     </div>
-                    <div class="col s12 m12 div-btnRegistrarse">
-                        <a style="color: white;" id="btnIniciarSesion" class="btn waves-effect waves-light">Iniciar Sesión<i
+                    <div class="col s12 m12">
+                        <a style="color: white;" id="btnIniciarSesion" class="btn btn-success">Iniciar Sesión<i
                                 class="material-icons right">send</i></a>
                     </div>
                 </div>
@@ -234,8 +219,8 @@
                                 <div class="determinate" style="width: 0%"></div>
                             </div>
                         </div>
-                        <div class="div-btnInicioSesion">
-                            <a id="btnRegistroPost" class="btn waves-effect waves-light">Crear Post<i
+                        <div class="text-center">
+                            <a id="btnRegistroPost" class="btn btn-success">Crear Curso<i
                                     class="material-icons left">create</i></a>
                         </div>
                     </div>

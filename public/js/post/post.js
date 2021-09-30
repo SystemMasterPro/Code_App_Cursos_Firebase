@@ -142,7 +142,7 @@ class Post {
   ) {
     if (imagenLink) {
       return `
-            <div class="card">
+            <div class="card" style='box-shadow: 3px -5px 5px 6px rgba(0,0,0,0.57);'>
               <div style="text-align:center;padding:5px;">
                 <a style="color:#3BC73F;" ><i class="fas fa-star"></i></a>
                 <a style="color:#3BC73F;"><i class="fas fa-star"></i></a>
@@ -150,11 +150,11 @@ class Post {
                 <a style="color:#3BC73F;"><i class="fas fa-star"></i></a>
                 <a style="color:#3BC73F;"><i class="fas fa-star"></i></a>
               </div>
-              <img src="${imagenLink}" class="card-img-top" alt="..." style="height: 60vh">
+              <img src="${imagenLink}" class="card-img-top" alt="..." style="height: 250px;">
               <div class="card-body" style="text-align:center;">
                 <h5 class="card-title" style='color:white;text-align:center;background-color: #126798;padding: 10px;'>${titulo}</h5>
                 <p class="card-text" style='color:black;text-align:center;font-family: 'Times New Roman', Times, serif;'>${descripcion}</p>
-                <a href="${videoLink}" style="width:100%;" target="_blank" class="btn btn-primary">Ir al Curso</a>
+                <a href="${videoLink}" target="_blank" class="btn" style='background-color: #191654; color:white; width:100%;' onmouseover="this.style.color='red'" onmouseout="this.style.color='white'">Ir al Curso</a>
               </div>
               <div class="card-footer" style="font-family: 'Times New Roman', Times, serif;">
                 <div class="row">
@@ -179,11 +179,11 @@ class Post {
                 <a style="color:#3BC73F;"><i class="fas fa-star"></i></a>
                 <a style="color:#3BC73F;"><i class="fas fa-star"></i></a>
               </div>
-              <iframe type="text/html" width="100%" height="400px" src='${videoLink}' frameborder="0"></iframe>
+              <iframe type="text/html" width="100%" height="250px" src='${videoLink}' frameborder="0"></iframe>
               <div class="card-body">
                 <h5 class="card-title" style='color:white;text-align:center;background-color: #126798;padding: 10px;'>${titulo}</h5>
                 <p class="card-text" style='color:black;text-align:center;font-family: 'Times New Roman', Times, serif;'>${descripcion}</p>
-                <a href="${videoLink}" target="_blank" style="width:100%;" class="btn btn-primary">Ir al Curso</a>
+                <a href="${videoLink}" target="_blank" style="width:100%;background-color: #191654; color:white" onmouseover="this.style.color='red'" onmouseout="this.style.color='white'" class="btn">Ir al Curso</a>
               </div>
               <div class="card-footer" style="font-family: 'Times New Roman', Times, serif;">
                 <div class="row">
