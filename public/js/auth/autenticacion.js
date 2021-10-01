@@ -12,14 +12,9 @@ class Autenticacion {
                     showConfirmButton: false,
                     timer: 1500
                 })
-                // Materialize.toast(`Bienvenido ${result.user.displayName}`, 5000)
             } else {
                 firebase.auth().signOut()
                 Swal.fire('Por Favor Valide Su Cuenta')
-                // Materialize.toast(
-                // `Por favor realiza la verificación de la cuenta`,
-                // 5000
-                // )
             }
         })
         $('.modal').modal('close')
@@ -34,23 +29,14 @@ class Autenticacion {
             }
 
             result.user.sendEmailVerification(configuracion).catch(error => {
-                // console.error(error)
-                // Materialize.toast(error.message, 4000)
                 Swal.fire({icon: 'error', title: 'Oops...', text: 'Datos Incorrectos!'})
             })
 
             firebase.auth().signOut()
 
             Swal.fire(`Bienvenido ${nombres}, debes realizar el proceso de verificación`)
-            // Materialize.toast(
-            // `Bienvenido ${nombres}, debes realizar el proceso de verificación`,
-            // 4000
-            // )
-
             $('.modal').modal('close')
         }).catch(error => {
-            // console.error(error)
-            // Materialize.toast(error.message, 4000)
             Swal.fire({icon: 'error', title: 'Oops...', text: 'Datos Incorrectos!'})
         })
     }
@@ -70,10 +56,7 @@ class Autenticacion {
                 showConfirmButton: false,
                 timer: 1500
             })
-            // Materialize.toast(`Bienvenido ${result.user.displayName} !! `, 4000)
         }).catch(error => {
-            // console.error(error)
-            // Materialize.toast(`Error al autenticarse con Google: ${error} `, 4000)
             Swal.fire({icon: 'error', title: 'Oops...', text: 'Error al autenticarse con Google!'})
         })
     }
@@ -94,16 +77,31 @@ class Autenticacion {
                 showConfirmButton: false,
                 timer: 1500
             })
-            // Materialize.toast(`Bienvenido ${result.user.displayName} !! `, 4000)
         }).catch(error => {
-            // console.error(error)
-            // Materialize.toast(`Error al autenticarse con Facebook: ${error} `, 4000)
             Swal.fire({icon: 'error', title: 'Oops...', text: 'Error al autenticarse con Facebook!'})
         })
 
     }
 
-    authTwitter() { // TODO: Crear auth con twitter
+    authCuentaTwitter() {
+        
+        const provider = new firebase.auth.TwitterAuthProvider();
+
+        firebase.auth().signInWithPopup(provider).then(result => {
+            $('#avatar').attr('src', result.user.photoURL)
+            $('.modal').modal('close')
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: `Bienvenido ${
+                    result.user.displayName
+                }`,
+                showConfirmButton: false,
+                timer: 1500
+            })
+        }).catch(error => {
+            Swal.fire({icon: 'error', title: 'Oops...', text: 'Error al autenticarse con Twitter!'})
+        })
     }
     // Metodo encargado de cambiar la contraseña almacenada en nuestra base de datos firebase
     resetPasswordByEmail(email) {
